@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import store from './store'
+import Counter from './pages/Counter';
+import {Provider} from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <div>
-      Redux-Soga
-    </div>
-  </React.StrictMode>
+  <Provider store={store}>
+      <Counter />
+  </Provider>
 );
